@@ -14,7 +14,7 @@ const port = process.env.PORT || 8080;
 // Setup and configure Express http server.
 const app = express();
 
-app.use(serveStatic('examples', {'index': ['index.html']}));
+app.use(serveStatic('example', {'index': ['index.html']}));
 
 app.use("/dist", serveStatic('dist'));
 
