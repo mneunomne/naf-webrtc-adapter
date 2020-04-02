@@ -12,6 +12,10 @@ const port = process.env.PORT || 8080;
 // Setup and configure Express http server.
 const app = express();
 
+app.use(serveStatic('examples', {'index': ['index.html']}));
+
+app.use("/dist", serveStatic('dist'));
+
 // Serve the example and build the bundle in development.
 if (process.env.NODE_ENV === "development") {
   const webpackMiddleware = require("webpack-dev-middleware");
