@@ -1,6 +1,8 @@
 // Load required modules
 const http = require("http"); // http server core module
 const path = require("path");
+var serveStatic = require('serve-static');  // serve static files
+
 const express = require("express"); // web framework external module
 
 // Set process name
